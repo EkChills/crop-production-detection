@@ -38,7 +38,7 @@ const MainForm = ({}: Props) => {
     e.preventDefault();
     try {
       setIsFetching(true)
-      const res = await fetch(`https://5ebb-102-89-23-148.ngrok-free.app/crop`, {
+      const res = await fetch(`https://2d15-102-89-41-231.ngrok-free.app//crop`, {
         method:"POST",
         headers: {
           'Content-Type': 'application/json', // Set the "Content-Type" header
