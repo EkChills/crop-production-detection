@@ -61,7 +61,7 @@ const MainForm = ({}: Props) => {
       
     } catch (error) {
       console.log(error);
-      toast.success('prediction done')
+      toast.success('Prediction Done😀')
       setPrediction(randomResult as any)
     }finally {
       setIsFetching(false)
