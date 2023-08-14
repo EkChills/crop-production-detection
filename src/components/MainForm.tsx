@@ -34,7 +34,7 @@ const MainForm = ({}: Props) => {
   console.log(inputData);
 
   
-  let randomResult = Math.random() * 4000
+  let randomResult = Math.floor(Math.random() * 7000 * 100) / 100;
 
   const submitHandler = async(e: React.FormEvent<HTMLFormElement>)=> {
     e.preventDefault();
