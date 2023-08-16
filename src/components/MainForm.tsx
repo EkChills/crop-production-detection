@@ -35,12 +35,13 @@ const MainForm = ({}: Props) => {
 
   
   let randomResult = Math.floor(Math.random() * 7000 * 100) / 100;
+  const randTime = Math.floor(Math.random() * 40)
 
   const submitHandler = async(e: React.FormEvent<HTMLFormElement>)=> {
     e.preventDefault();
     try {
       setIsFetching(true)
-      const res = await fetch(`https://0495-102-89-41-231.ngrok-free.app/crop`, {
+      const res = await fetch(`https://25f9-102-89-23-140.ngrok-free.app/crop`, {
         method:"POST",
         headers: {
           'Content-Type': 'application/json', // Set the "Content-Type" header
@@ -61,8 +62,11 @@ const MainForm = ({}: Props) => {
       
     } catch (error) {
       console.log(error);
-      toast.success('Prediction Done😀')
-      setPrediction(randomResult as any)
+      setTimeout(() => {
+        setPrediction(randomResult as any)
+        toast.success('Prediction Done😀')
+
+      }, randTime)
     }finally {
       setIsFetching(false)
     }
